@@ -18,6 +18,7 @@ export class RegisterComponent {
     console.log("Usuario creado:", this.user);
     alert("Usuario creado con éxito!");
     this.resetForm();
+    alert("Usuario creado correctamente");
   }
 
   resetForm() {
