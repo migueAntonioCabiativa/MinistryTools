@@ -1,0 +1,32 @@
+:host{
+    --primary-color:#d85454;
+
+
+    --mode:#000;
+    --font:#e7e6e4;
+
+    --light-mode:#ccc;
+    --light-font:#222
+    ;
+    ;
+    
+}
+
+.background-black{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--mode);
+}
+.background-white{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--light-mode);
+}

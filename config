@@ -1,0 +1,77 @@
+INSTALACIÓN DE APACHE
+
+sudo apt-get update
+
+NICIO - ESTADO - DETENER APACHE
+
+sudo systemctl start apache2
+sudo systemctl status apache2
+sudo systemctl stop apache2
+sudo systemctl restart apache2
+
+
+PERMISOS 
+
+sudo chmod 0777 /var/www/html/
+sudo chmod 0755 /var/www/html/
+sudo chmod 0644 /var/www/html/index.html
+
+
+INSTALAR MYSQL
+
+sudo apt update
+sudo apt-cache search mysql-server
+sudo apt install mysql-server-8.0
+
+CREAR USUARIO Y CONTRASEÑA
+
+sudo mysql
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Ecuador.123';
+exit
+
+CONFIGURACIÓN
+
+sudo systemctl start mysql.service
+sudo mysql_secure_installation
+sudo systemctl is-enabled mysql.service
+
+INSTALACIÓN DE PHPMYADMIN
+
+sudo apt update
+sudo apt-get install -y php php-tcpdf php-cgi php-pear php-mbstring libapache2-mod-php php-common php-phpseclib php-mysql
+sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl
+sudo phpenmod mbstring
+sudo systemctl restart apache2
+
+
+
+Instalar NodeJS
+
+sudo apt install nodejs
+sudo apt install npm
+
+Este comando instalara solo  versiones registradas en ubuntu por lo tanto se van a ejecutar los siguientes comandos para actualizar nodejs y npm
+
+sudo su
+npm install -g n
+
+para instala Ultima version estable de nodejs
+n stable
+
+y para la utima version de npm
+npm install npm@latest
+
+
+ADQUIRIR EL INSTALADOR DE LARAVEL
+
+composer global require laravel/installer
+
+Agregar esta comando al path
+export PATH=.config/composer/vendor/bin/:$PATH
+
+laravel new wedding o nombre de proyecto
+
+
+
+
+
